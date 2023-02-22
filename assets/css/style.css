@@ -16,6 +16,7 @@
     --secondary: #292928;
     --tertiary: #a2a3a2;
     --special: #adff2f;
+    --shadow: #00000066;
     /* Font_Family */
     --ff-opensans: 'Open Sans', sans-serif;
 }
@@ -102,6 +103,23 @@ body {
     gap: 2rem;
 }
 
+.btn {
+    border: none;
+    padding: .5rem 1rem;
+}
+
+.transparent_btn {
+    background-color: transparent;
+    
+    color: var(--light);
+    
+    border: 1px solid var(--light);
+    border-radius: 1rem;
+    
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
 /* #endregion utilities */
 
 /* #region main */
@@ -139,6 +157,9 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    background-color: var(--shadow);
+    padding: 2rem;
 }
 /* #region sidebar */
 
