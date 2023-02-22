@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+/* #region common */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --dark: #000000;
+    --light: #fefffe;
+    --primary: #151822;
+    --secondary: #292928;
+    --tertiary: #a2a3a2;
+    --special: #adff2f;
+    /* Font_Family */
+    --ff-opensans: 'Open Sans', sans-serif;
+    /* Responsive breaks */
+    --r-xs: 480px;
+    --r-sm: 768px;
+    --r-md: 900px;
+    --r-lg: 1200px;
+}
+
+/* #endregion common */
+
+/* #region debug */
+
+/* #endregion debug */
+
+/* #region utilities */
+
+/* #endregion utilities */
+
+/* #region main */
+
+/* #endregion main */
