@@ -302,6 +302,10 @@ img {
     overflow-y: auto;
 }
 
+#main_container .container {
+    padding: 0 1.2rem;
+}
+
 /* #region labels */
 
 #labels .col_12 {
@@ -333,7 +337,23 @@ img {
 
 /* #region played_section */
 
+#played h2 {
+    margin-bottom: 1.5rem;
+}
 
+#played .card {
+    padding: .5rem;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+}
+
+#played .card h4 {
+    line-height: 1.1rem;
+}
 
 /* #endregion played_section */
 
