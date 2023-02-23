@@ -337,11 +337,16 @@ img {
 
 /* #region played_section */
 
-#played h2 {
-    margin-bottom: 1.5rem;
+#played h2,
+#personal p,
+#popular p {
+    line-height: 1.75rem;
+    margin-bottom: 1.25rem;
 }
 
-#played .card {
+#played .card,
+#personal .card,
+#popular .card {
     padding: .5rem;
     min-height: 100%;
     display: flex;
@@ -351,8 +356,18 @@ img {
     gap: .5rem;
 }
 
+#played .row,
+#personal .row {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+}
+
 #played .card h4 {
     line-height: 1.1rem;
+}
+
+#popular .card img {
+    border-radius: 50%;
 }
 
 /* #endregion played_section */
