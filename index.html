@@ -212,9 +212,10 @@
                         </div>
                         <div class="player_bar">
                             <span class="color_light text_xs">0:25</span>
-                            <span>
-                                <input type="range" id="player_timebar" min="0" max="275" step="1" value="25">
-                            </span>
+                            <div class="outer_bar">
+                                <div class="inner_bar"></div>
+                                <div class="bar_circle visibility_none"></div>
+                            </div>
                             <span class="color_light text_xs">4:35</span>
                         </div>
                     </div>
@@ -225,9 +226,10 @@
                         <i class="fa-solid fa-list color_light"></i>
                         <i class="fa-solid fa-desktop-alt color_light"></i>
                         <i class="fa-solid fa-volume-up color_light"></i>
-                        <span>
-                            <input type="range" id="player_volume" min="0" max="100" step="1" value="25">
-                        </span>
+                        <div class="outer_bar">
+                            <div class="inner_bar"></div>
+                            <div class="bar_circle visibility_none"></div>
+                        </div>
                     </div>
                 </div>
                 <!-- /.col_2 -->
