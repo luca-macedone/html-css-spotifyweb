@@ -127,6 +127,7 @@ img {
 
 .btn {
     border: none;
+    cursor: pointer;
 }
 
 .transparent_btn {
@@ -189,9 +190,7 @@ img {
 
 #app_main .banner {
     width: calc(100% - .8rem);
-    position: sticky;
-    top: 0;
-    right: .8rem;
+    
 
     display: flex;
     justify-content: flex-end;
@@ -302,6 +301,10 @@ img {
     overflow-y: auto;
 }
 
+#main_container .call_to_action {
+    display: none;
+}
+
 #main_container .container {
     padding: 0 1.2rem;
 }
@@ -366,9 +369,13 @@ img {
     line-height: 1.1rem;
 }
 
+/* #region popular */
+
 #popular .card img {
     border-radius: 50%;
 }
+
+/* #endregion popular */
 
 /* #endregion played_section */
 
@@ -380,6 +387,11 @@ img {
 
 #app_footer {
     height: 100px;
+}
+
+#app_footer .row .col_4:last-child {
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* #region left:song */
@@ -510,6 +522,7 @@ img {
 /* #region right:player_setting */
 
 .player_settings {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -533,6 +546,15 @@ img {
 /* #endregion main */
 
 /* #region responsive */
+
+@media screen and (min-height: 500px) {
+    #main_container .call_to_action {
+        display: block;
+        position: sticky;
+        top: 0;
+        right: .8rem;
+    }
+}
 
 /* #region sm_mobile */
 
@@ -627,8 +649,10 @@ img {
         border-top: 1px solid var(--tertiary);
     }
 
-    .player {
-        max-width: 450px;
+    .player,
+    .player_settings {
+        width: 100%;
+        max-width: 480px;
     }
 
 }
@@ -644,6 +668,11 @@ img {
 
     .col_md_6 {
         width: calc(100% / 12 * 6);
+    }
+
+    .player {
+        width: 100%;
+        max-width: 768px;
     }
 }
 
