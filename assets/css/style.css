@@ -512,7 +512,7 @@ img {
 }
 
 .song_img {
-    width: 30px;
+    width: 40px;
 }
 
 .song_data,
@@ -525,6 +525,11 @@ img {
 
 .song_buttons {
     gap: .5rem;
+}
+
+.song_data span:nth-child(2):hover {
+    text-decoration: underline;
+    color: var(--light);
 }
 
 /* #endregion left:song */
