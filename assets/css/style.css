@@ -160,6 +160,42 @@ img {
     color: var(--tertiary);
 }
 
+.card_img {
+    position: relative;
+}
+
+.card_overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 300;
+}
+
+.card_img:hover .card_overlay {
+    display: block;
+}
+
+.card_overlay i {
+    position: absolute;
+    top: calc(50% - 1.75rem);
+    left: calc(50% - 1.75rem);
+    z-index: 400;
+    cursor: pointer;
+}
+
+.card_overlay i.text_lg {
+    font-size: 3.5rem;
+}
+
+.overlay {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--shadow);
+}
+
 /* #endregion utilities */
 
 /* #region main */
@@ -197,7 +233,15 @@ img {
     align-items: center;
 
     background-color: var(--shadow);
-    padding: 2rem .5rem;
+    padding: 2rem 1.5rem;
+}
+
+#app_main .banner .btn {
+    transition: .25s all ease-in-out;
+}
+
+#app_main .banner .btn:hover {
+    scale: 1.2;
 }
 
 /* #region sidebar */
@@ -292,6 +336,40 @@ img {
     fill: var(--light);
 }
 
+#sidebar .side_top li:hover span,
+#sidebar .side_middle li:hover {
+    color: var(--light);
+    cursor: pointer;
+}
+
+#sidebar .side_middle .button:hover {
+    cursor: pointer;
+}
+
+#sidebar .side_middle .button:hover .btn {
+    background-color: var(--light);
+}
+
+#sidebar .side_middle .button:hover span {
+    color: var(--light);
+} 
+
+#sidebar .side_top li:hover .svg_icon path {
+    fill: var(--light);
+}
+
+#sidebar .side_bottom li:first-child:hover {
+    cursor: pointer;
+}
+
+#sidebar .side_bottom li:first-child:hover span {
+    color: var(--light);
+}
+
+#sidebar .side_bottom li:first-child:hover path {
+    fill: var(--light);
+}
+
 /* #endregion sidebar */
 
 /* #region main_container */
@@ -336,6 +414,11 @@ img {
     background-color: var(--special);
 }
 
+#labels .label:hover {
+    color: var(--light);
+    cursor: pointer;
+}
+
 /* #endregion labels */
 
 /* #region played_section */
@@ -369,6 +452,10 @@ img {
     line-height: 1.1rem;
 }
 
+#popular .card img {
+    cursor: pointer;
+}
+
 /* #region popular */
 
 #popular .card img {
@@ -387,6 +474,14 @@ img {
 
 #app_footer {
     height: 100px;
+}
+
+#app_footer i {
+    cursor: pointer;
+}
+
+#app_footer i:hover {
+    color: var(--light);
 }
 
 #app_footer .row .col_4:last-child {
@@ -501,7 +596,7 @@ img {
 .bar_circle {
     width: 14px;
     aspect-ratio: 1 / 1;
-    background-color: var(--special);
+    background-color: var(--light);
     border-radius: 50%;
     cursor: grab;
     position: relative;
@@ -553,6 +648,7 @@ img {
         position: sticky;
         top: 0;
         right: .8rem;
+        z-index: 500;
     }
 }
 
