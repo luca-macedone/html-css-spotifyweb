@@ -302,6 +302,41 @@ img {
     overflow-y: auto;
 }
 
+/* #region labels */
+
+#labels .col_12 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+#labels .label {
+    text-transform: uppercase;
+}
+
+#labels .label:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#labels .horizontal_line {
+    height: 2px;
+    width: 2rem;
+    background-color: var(--special);
+}
+
+/* #endregion labels */
+
+/* #region played_section */
+
+
+
+/* #endregion played_section */
+
 /* #endregion main_container */
 
 /* #endregion app_main */
