@@ -848,6 +848,13 @@ img {
         gap: .5rem;
     }
 
+    #main_container section>h2,
+    #main_container section>p 
+    {
+        align-self: flex-start;
+        margin-left: 1rem;
+    }
+
 }
 
 /* #endregion sm_mobile */
