@@ -30,6 +30,23 @@ img {
     max-width: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--special);
+}
+
 /* #endregion common */
 
 /* #region debug */
@@ -77,6 +94,7 @@ img {
     background-color: beige;
     height: 90px;
 }
+
 /* #endregion debug */
 
 /* #region utilities */
@@ -119,12 +137,15 @@ img {
 .text_xs {
     font-size: .7rem;
 }
+
 .text_sm {
     font-size: 1rem;
 }
+
 .text_md {
     font-size: 1.5rem;
 }
+
 .text_lg {
     font-size: 2rem;
 }
@@ -136,24 +157,26 @@ img {
 
 .transparent_btn {
     background-color: transparent;
-    
+
     color: var(--light);
-    
+
     border: 1px solid var(--light);
     border-radius: 1rem;
-    
+
     padding: .5rem 1.5rem;
+    transition: .25s all ease-in-out;
 }
 
 .tertiary_btn {
     background-color: var(--tertiary);
-    
+
     color: var(--dark);
 
     width: 2rem;
     aspect-ratio: 1 / 1;
-    
+
     font-size: 1.5rem;
+    transition: .25s all ease-in-out;
 }
 
 .color_light {
@@ -234,7 +257,7 @@ img {
 
 #app_main .banner {
     width: calc(100% - .8rem);
-    
+
 
     display: flex;
     justify-content: flex-end;
@@ -242,6 +265,8 @@ img {
 
     background-color: var(--shadow);
     padding: 2rem 1.5rem;
+
+    border-bottom-right-radius: 1rem;
 }
 
 #app_main .banner .btn {
@@ -286,10 +311,10 @@ img {
 
 #sidebar .side_top li,
 #sidebar .side_middle li,
-#sidebar .side_bottom li
-{
+#sidebar .side_bottom li {
     padding-top: .25rem;
     padding-bottom: .25rem;
+    transition: .25s all ease-in-out;
 }
 
 #sidebar .side_top li,
@@ -344,6 +369,13 @@ img {
     fill: var(--light);
 }
 
+#sidebar .side_top li span,
+#sidebar .side_middle li span,
+#sidebar .side_bottom li span,
+.button span {
+    transition: .25s all ease-in-out;
+}
+
 #sidebar .side_top li:hover span,
 #sidebar .side_middle li:hover {
     color: var(--light);
@@ -360,7 +392,7 @@ img {
 
 #sidebar .side_middle .button:hover span {
     color: var(--light);
-} 
+}
 
 #sidebar .side_top li:hover .svg_icon path {
     fill: var(--light);
@@ -408,15 +440,10 @@ img {
 }
 
 #main_container .container {
-    /* padding: 0 1rem; */
     width: 98%;
     margin: auto;
     padding: 0 1rem;
 }
-
-/* #main_container h2 {
-    text-align: center;
-} */
 
 #main_container section {
     display: flex;
@@ -437,6 +464,7 @@ img {
 
 #labels .label {
     text-transform: uppercase;
+    transition: .25s all ease-in-out;
 }
 
 #labels .label:first-of-type {
@@ -514,6 +542,7 @@ img {
 
 #app_footer i {
     cursor: pointer;
+    transition: .25s all ease-in-out;
 }
 
 #app_footer i:hover {
@@ -536,8 +565,7 @@ img {
 
 .song,
 .player,
-.player_settings 
-{
+.player_settings {
     height: 100px;
 }
 
@@ -567,6 +595,10 @@ img {
     display: none;
 }
 
+.song_data span:nth-child(2) {
+    transition: .25s all ease-in-out;
+}
+
 .song_data span:nth-child(2):hover {
     text-decoration: underline;
     color: var(--light);
@@ -591,7 +623,7 @@ img {
 }
 
 .player {
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -637,6 +669,7 @@ img {
     border-radius: 4px;
     margin-left: 1px;
     position: relative;
+    transition: .25s all ease-in-out;
 }
 
 .bar_circle {
@@ -672,8 +705,7 @@ img {
 }
 
 .player_settings .settings,
-.player_settings .volume_bar 
-{
+.player_settings .volume_bar {
     display: flex;
     gap: .5rem;
 }
@@ -711,12 +743,6 @@ img {
     .col_sm_6 {
         width: calc(100% / 12 * 6);
     }
-
-    #main_container h2,
-    #main_container p {
-        align-self: flex-start;
-        margin-left: 1rem;
-    }
 }
 
 /* #endregion xs_mobile */
@@ -734,13 +760,12 @@ img {
 
     #app_main .banner {
         width: calc(100% - .8rem);
-    }    
+    }
 
     #sidebar .side_top,
-    #sidebar .side_bottom
-    {
+    #sidebar .side_bottom {
         align-items: flex-start;
-    }  
+    }
 
     #sidebar .side_middle {
         flex-grow: 3;
@@ -751,8 +776,7 @@ img {
     }
 
     #sidebar .side_top li,
-    #sidebar .side_bottom li
-    {
+    #sidebar .side_bottom li {
         display: flex;
         justify-content: flex-start;
     }
@@ -763,26 +787,23 @@ img {
 
     .side_top .logo.visibility {
         display: none;
-    } 
-    
+    }
+
     .side_top .logo.visibility_none {
         display: block;
-    } 
+    }
 
     .side_top .visibility_none,
-    .side_bottom .visibility_none 
-    {
+    .side_bottom .visibility_none {
         display: inline-block;
     }
 
-    .svg_icon
-    {
+    .svg_icon {
         margin-right: .75rem;
     }
 
     .side_top li,
-    .side_middle
-    {
+    .side_middle {
         padding-left: 1rem;
     }
 
@@ -792,8 +813,7 @@ img {
 
     .side_top li>span,
     .side_middle li>span,
-    .side_bottom li>span
-    {
+    .side_bottom li>span {
         align-self: center;
     }
 
@@ -838,7 +858,7 @@ img {
     .col_md_3 {
         width: calc(100% / 12 * 3);
     }
-    
+
     .col_md_4 {
         width: calc(100% / 12 * 4);
     }
@@ -851,7 +871,7 @@ img {
         display: inline-block;
         width: 40px;
         min-width: 32px;
-    } 
+    }
 
     .player {
         width: 100%;
@@ -866,8 +886,7 @@ img {
     }
 
     .player_settings .settings,
-    .player_settings .volume_bar
-    {
+    .player_settings .volume_bar {
         gap: .5rem;
     }
 
@@ -875,7 +894,7 @@ img {
         max-width: 20%;
         max-width: 3rem;
         justify-content: flex-end;
-        
+
     }
 
     .player_settings .volume_bar .outer_bar {
@@ -888,6 +907,11 @@ img {
         padding-right: .5rem;
     }
 
+    #played .card,
+    #personal .card,
+    #popular .card {
+        align-items: flex-start;
+    }
 }
 
 /* #endregion md_tablet */
