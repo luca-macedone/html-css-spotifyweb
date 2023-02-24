@@ -712,7 +712,8 @@ img {
         width: calc(100% / 12 * 6);
     }
 
-    #main_container h2 {
+    #main_container h2,
+    #main_container p {
         align-self: flex-start;
         margin-left: 1rem;
     }
